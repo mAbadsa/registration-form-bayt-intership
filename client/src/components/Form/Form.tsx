@@ -74,6 +74,7 @@ const Form: FC<FormProps> = ({
           size="small"
           sx={{
             width: 0.48,
+            mr: 1,
           }}
           error={!!formik.touched.firstName && !!formik.errors.firstName}
         />

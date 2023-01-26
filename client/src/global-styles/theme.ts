@@ -26,7 +26,15 @@ const theme = createTheme({
   components: {
     MuiButtonBase: {
       styleOverrides: {
-        root: {},
+        root: {
+          MuiButton: {
+            root: {
+              "&:hover": {
+                backgroundColor: "#67ecd0",
+              },
+            },
+          },
+        },
       },
     },
     MuiInputBase: {

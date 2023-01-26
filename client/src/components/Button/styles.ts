@@ -8,6 +8,9 @@ export const classes = {
 };
 
 const StyledButton = styled(MUIButton)(({ theme }) => ({
+  "&:hover": {
+    backgroundColor: "#2ea188",
+  },
   [`&.${classes.withButton}`]: {
     display: "flex",
     alignItems: "center",

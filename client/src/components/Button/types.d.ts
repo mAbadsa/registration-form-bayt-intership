@@ -1,5 +1,7 @@
-export interface ButtonProps {
+import { ExtendButtonBase } from "@mui/material/Button";
+export interface ButtonProps extends ExtendButtonBase {
   className?: string;
+  children: ReactNode | ReactElement | string | undefined;
   variant?: "text" | "outlined" | "contained" | undefined;
   color?:
     | "inherit"
@@ -15,6 +17,7 @@ export interface ButtonProps {
   arialabel?: string;
   disableElevation?: boolean;
   withIcon?: boolean | undefined;
-  fullWidth: boolean;
+  fullWidth?: boolean;
   onClick?: (evt: any) => void;
 }
+

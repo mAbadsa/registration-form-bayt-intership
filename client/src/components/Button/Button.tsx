@@ -3,7 +3,7 @@ import { FC, ReactElement } from "react";
 import StyledButton, { classes } from "./styles";
 import { ButtonProps } from "./types";
 
-const Button: FC<ButtonProps> = ({
+const Button = ({
   className,
   children,
   variant,
@@ -16,7 +16,7 @@ const Button: FC<ButtonProps> = ({
   disableElevation = false,
   onClick,
   ...props
-}): ReactElement<any, any> | null => {
+}: ButtonProps): ReactElement<any, any> | null => {
   return (
     <StyledButton
       className={`${className} ${withIcon ? classes.withButton : ""}`}

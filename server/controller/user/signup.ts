@@ -26,7 +26,6 @@ const signup =
     try {
       const user = await getUser({ User })({ email });
       if (user) {
-        // return res.status(400).json({ errors: [{ msg: "User already exists" }] });
         throw boomify(400, "User already exist.");
       }
       const _user = await createUser({ User })({
