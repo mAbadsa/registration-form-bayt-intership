@@ -64,6 +64,11 @@ const Form: FC<FormProps> = ({
     <StyledForm className={`${classes.root}`} onSubmit={formik.handleSubmit}>
       <InputContainer>
         <TextField
+          className={`${
+            !!formik.touched.firstName && !!formik.errors.firstName
+              ? "error"
+              : "success"
+          }`}
           type="text"
           name="firstName"
           id="firstName"
@@ -79,6 +84,11 @@ const Form: FC<FormProps> = ({
           error={!!formik.touched.firstName && !!formik.errors.firstName}
         />
         <TextField
+          className={`${
+            !!formik.touched.firstName && !!formik.errors.firstName
+              ? "error"
+              : "success"
+          }`}
           type="text"
           name="lastName"
           id="lastName"
@@ -104,6 +114,11 @@ const Form: FC<FormProps> = ({
         />
       </InputContainer>
       <TextField
+        className={`${
+          !!formik.touched.firstName && !!formik.errors.firstName
+            ? "error"
+            : "success"
+        }`}
         type="email"
         name="email"
         id="email"
@@ -123,7 +138,9 @@ const Form: FC<FormProps> = ({
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <StyledDesktopDatePicker
           className={`${
-            !!formik.touched.birthdate && !!formik.errors.birthdate && "error"
+            !!formik.touched.birthdate && !!formik.errors.birthdate
+              ? "error"
+              : "success"
           }`}
           label="birthdate"
           inputFormat="MM/DD/YYYY"
@@ -165,6 +182,11 @@ const Form: FC<FormProps> = ({
         />
       </FormControl>
       <TextField
+        className={`${
+          !!formik.touched.firstName && !!formik.errors.firstName
+            ? "error"
+            : "success"
+        }`}
         type="phone"
         name="phoneNumber"
         id="phoneNumber"
@@ -182,6 +204,11 @@ const Form: FC<FormProps> = ({
         error={!!formik.touched.phoneNumber && !!formik.errors.phoneNumber}
       />
       <TextField
+        className={`${
+          !!formik.touched.firstName && !!formik.errors.firstName
+            ? "error"
+            : "success"
+        }`}
         type="password"
         name="password"
         id="password"
@@ -199,6 +226,11 @@ const Form: FC<FormProps> = ({
         error={!!formik.touched.password && !!formik.errors.password}
       />
       <TextField
+        className={`${
+          !!formik.touched.firstName && !!formik.errors.firstName
+            ? "error"
+            : "success"
+        }`}
         type="password"
         name="confirmPassword"
         id="confirmPassword"

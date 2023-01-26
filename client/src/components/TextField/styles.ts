@@ -7,12 +7,15 @@ export const classes = {
   error: `${PREFIX}-textfield`,
 };
 
-const StyledTextField = styled(MUITextField)(({ theme }) => ({
+const StyledTextField = styled(MUITextField)(({ theme, error }) => ({
   [`&.${classes.root}`]: {
     marginBlock: theme.spacing(2),
   },
   [`&.${classes.error} .Mui-error`]: {
-    borderColor: "red",
+    borderColor: error ? "red" : "green",
+  },
+  "&.success .MuiInputBase-formControl": {
+    border: error ? "1px solid red" : "1px solid green",
   },
 }));
 

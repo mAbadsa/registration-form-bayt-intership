@@ -27,9 +27,14 @@ export const Image = styled("img")({
 });
 
 export const StyledDesktopDatePicker = styled(DesktopDatePicker)`
-  error {
+  .error {
     fieldset {
       border-color: red;
+    }
+  }
+  .success {
+    fieldset {
+      border-color: gree;
     }
   }
 `;
